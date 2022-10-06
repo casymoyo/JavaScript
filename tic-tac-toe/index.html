@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>tic-tac-toe</title>
+</head>
+<body>
+    <div class="game">
+        <h2 class="text-center">Tic Tac Toe Game</h2>
+
+        <button type="button" class="start" onclick="start();">Start Game</button>
+
+        <div class="game-player-name">
+
+            <form action="">
+                <div class="form-group player-one">
+                    <h3 class="text-center">Player 1</h3>
+                    <input type="text" name="" id="player-one-name" placeholder="Enter your name" onchange="player_1_name();">
+                    <br>
+                    <button type="button" id="player-one-next" onclick="next_player();">Next</button>
+                </div>
+                <div class="form-group player-two">
+                    <h3 class="text-center">Player 2</h3>
+                    <input type="text" name="" id="player-two-name" placeholder="Enter your name" onchange="player_2_name();">
+                    <br>
+                    <button type="button" id="player-two-next" onclick="start_game();">Next</button>
+                </div>
+            </form>
+
+        </div>
+
+        <div class="main-game">
+            <h3 id="versus">X Vs Y</h3>
+            <h4 id="results"></h4>
+            <div class="game-grid">
+                <table>
+                    <tr>
+                        <td class="data" id="d1"></td>
+                        <td class="data" id="d2"></td>
+                        <td class="data" id="d3"></td>
+                    </tr>
+                    <tr>
+                        <td class="data" id="d4"></td>
+                        <td class="data" id="d5"></td>
+                        <td class="data" id="d6"></td>
+                    </tr>
+                    <tr>
+                        <td class="data" id="d7"></td>
+                        <td class="data" id="d8"></td>
+                        <td class="data" id="d9"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="buttons">
+                <button type="button" onclick="new_game();">New Game</button>
+                <button type="button" onclick="reset_game();">Restart Game</button>
+            </div>
+        </div>
+
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

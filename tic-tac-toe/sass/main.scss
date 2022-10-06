@@ -1,0 +1,99 @@
+@mixin flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin button{
+    button{
+        margin-top: 20px;
+        width: 188px;
+        color: white;
+        background: #541e57;
+        border: none;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px;
+        cursor: pointer;
+    }
+    button:hover{
+        background: #a739ad;;
+        opacity: .9;
+    }
+}
+
+.text-center{
+    text-align: center;
+}
+body{
+    @include flex();
+    margin-top: 50px;
+    font-family: sans-serif;
+    background: #fefe;
+}
+.game{
+    @include flex();
+    height: 80vh;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px;
+    width: 100vh;
+    h2{
+        opacity: .9;
+        letter-spacing: 5px;
+    }
+    @include button();
+    
+    .player-one,
+    .player-two{
+        display: none;
+        padding: 10px;
+        input{
+            padding-left: 5px;
+            font-size: 14px;
+            margin-top: 5px;
+            width: 180px;
+            height: 30px;
+            border-radius: 5px;
+            border: 1px solid #a739ad;;
+        }
+        @include button();
+    }
+    .show{
+        display: block;
+    }
+    .main-game{
+        display: none;
+        place-items: center;
+        table{
+            tr{
+                
+                td{
+                    font-size: 20px;
+                    text-align: center;
+                    height:40px;
+                    width: 40px;
+                    padding: 20px;
+                    border: 1px solid #1e2f16 !important;
+                    opacity: .8;
+                    cursor:pointer;
+                }
+                td:hover{
+                    width: 45px;
+                    height: 45px;
+                    transition: all 0.3ms ease-in;
+                }
+            }
+        }
+        .game-grid{
+            margin-top: -15px;
+        }
+        h3{
+            opacity: .8;
+            color: #a739ad;
+        }
+    }
+}
+
+.dont-show{
+    display: none;
+}
